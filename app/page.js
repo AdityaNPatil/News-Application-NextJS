@@ -7,9 +7,9 @@ import { useState, useEffect, useContext } from "react";
 import { SearchContext } from "@/context/searchContext";
 
 // api key stored in config.js
-import API_KEY from "@/config"
+// import API_KEY from "@/config"
 
-const apikey = API_KEY || process.env.API_KEY;
+const apikey = process.env.API_KEY;
 
 // function to fetch news -- if nothing passed search general news with publishedAt sort by -- because of context
 async function fetchNews(searchQuery , sortQuery) {
