@@ -8,6 +8,17 @@
 - store api key in config.js
 - use the api key to fetch news
 - Here config.js is put in gitignore hence not in the repo
+**or**
+- create .env
+- put `API_KEY : YourAPIkey`
+- open next.config.mjs
+- put 
+- ```const nextConfig = {
+    env:{
+        API_KEY : process.env.API_KEY
+    }
+};```
+- use apiKey in page.js either from config.js or env
 
 ## Each article has following info
 ```json

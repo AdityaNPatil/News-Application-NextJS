@@ -9,9 +9,11 @@ import { SearchContext } from "@/context/searchContext";
 // api key stored in config.js
 import API_KEY from "@/config"
 
+const apikey = API_KEY || process.env.API_KEY;
+
 // function to fetch news -- if nothing passed search general news with publishedAt sort by -- because of context
 async function fetchNews(searchQuery , sortQuery) {
-  const response = await fetch(`https://newsapi.org/v2/everything?q=${searchQuery}&sortBy=${sortQuery}&language=en&apiKey=${API_KEY}`)
+  const response = await fetch(`https://newsapi.org/v2/everything?q=${searchQuery}&sortBy=${sortQuery}&language=en&apiKey=${apikey}`)
   const data = await response.json(); // data is object {articles:[array of news articles] , status , totalResults} -- we need only articles
   // return articles
   return data.articles;
