@@ -40,7 +40,7 @@ export default function Home() {
       {/* {console.log(articles)} */}
 
       {/* render articles using the fetched articles array */}
-      <div className="grid grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {articles &&
           articles.map((article, idx) => {
             if(article.title != "[Removed]")

@@ -40,7 +40,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="flex flex-row justify-between p-3 bg-blue-600 text-white ">
+        <nav className="flex flex-col md:flex-row items-center justify-between p-3 bg-blue-600 text-white space-y-2 md:space-y-0 md:space-x-4">
             {/* Logo */}
             <Link href={"/"}>
                 <Image
